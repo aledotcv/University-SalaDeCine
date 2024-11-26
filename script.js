@@ -34,12 +34,13 @@ function seleccionarButaca(index) {
         document.getElementById('mensaje').textContent = 'Butaca ocupada. Por favor, selecciona otra.';
         return;
     }
-
+    if(!document.getElementById('userName').value == ''){
     const numeroButaca = index + 1;
     document.getElementById('numeroButaca').value = numeroButaca;
     butacas[index] = document.getElementById('userName').value;
     llenarTabla();
     document.getElementById('mensaje').textContent = '¡Reservación exitosa!';
+    }
 }
 
 function Reservar() {
